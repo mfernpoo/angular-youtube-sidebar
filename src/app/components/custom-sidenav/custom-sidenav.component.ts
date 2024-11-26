@@ -11,19 +11,18 @@ export type MenuItem = {
 }
 
 @Component({
-  selector: 'app-custom-sidenav',
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    MatNavList,
-    MatListItem,
-    MatIcon,
-    MatListItemTitle,
-    RouterLink,
-    RouterLinkActive,
-    MatListItemIcon
-  ],
-  template: `
+    selector: 'app-custom-sidenav',
+    imports: [
+        NgOptimizedImage,
+        MatNavList,
+        MatListItem,
+        MatIcon,
+        MatListItemTitle,
+        RouterLink,
+        RouterLinkActive,
+        MatListItemIcon
+    ],
+    template: `
     <div class="sidenav-header">
       <img [width]="profilePicSize()" [height]="profilePicSize()"
            src="https://yt3.ggpht.com/ytc/AIdro_nHjl4n9VuTLFIBZ3HDjIUdnSqMqBAZOVnA1ZCqvXx1cfQ=s176-c-k-c0x00ffffff-no-rj"/>
@@ -50,7 +49,7 @@ export type MenuItem = {
 
     </mat-nav-list>
   `,
-  styles: [`
+    styles: [`
 
     :host * {
       transition: all 500ms ease-in-out;
