@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+mat-toolbar{
+  position: relative;
+  z-index: 2;
+}
+.content{
+  padding: 24px;
+}
+
+mat-sidenav-container{
+  height: calc(100vh - 64px);
+
+  @include mat.sidenav-overrides((
+    container-background-color: white,
+    container-shape: 0
+  ))
+}
+
+mat-sidenav, mat-sidenav-content{
+  transition: all 500ms ease-in-out;
+}
