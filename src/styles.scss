@@ -2,8 +2,7 @@
 
 @use "@angular/material" as mat;
 
-@include mat.elevation-classes();
-@include mat.app-background();
+@include mat.core();
 
 html, body {
   height: 100%;
@@ -31,7 +30,7 @@ $theme-accent: mat.m2-define-palette(mat.$m2-blue-palette, 200, 100, 400);
 
 $my-theme: mat.m2-define-light-theme((
   color:(
-  primary: $theme-primary,
+    primary: $theme-primary,
     accent: $theme-accent,
   ),
   typography: mat.m2-define-typography-config(),
@@ -39,3 +38,4 @@ $my-theme: mat.m2-define-light-theme((
 ));
 
 @include mat.all-component-themes($my-theme)
+

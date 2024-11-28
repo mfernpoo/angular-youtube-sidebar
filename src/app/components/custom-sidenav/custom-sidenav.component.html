@@ -1,0 +1,14 @@
+<div class="sidenav-header">
+  <img [width]="profilePicSize()" [height]="profilePicSize()"
+       src="https://yt3.ggpht.com/ytc/AIdro_nHjl4n9VuTLFIBZ3HDjIUdnSqMqBAZOVnA1ZCqvXx1cfQ=s176-c-k-c0x00ffffff-no-rj"/>
+  <div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
+    <h2>Your channel</h2>
+    <p>Marcelo Andrés Fernández Poo</p>
+  </div>
+</div>
+<mat-nav-list>
+  @for (item of menuItems(); track item) {
+    <app-menu-item [item]="item" [collapse]="sideNavCollapsed()"/>
+  }
+
+</mat-nav-list>
